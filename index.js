@@ -6,12 +6,12 @@ var Assignment = require('./assignment');
 const app = express();
 
 mongoose.Promise = global.Promise;
-var options = {
+/*var options = {
     useMongoClient: true,
     user: 'admin',
     pass: 'admin'
-  };
-mongoose.connect('mongodb://admin:admin@ds235827.mlab.com:35827/es1', options);
+  };*/
+mongoose.connect('mongodb://admin:admin@ds235827.mlab.com:35827/es1'/*, options*/);
 const db = mongoose.connection;
 db.on('error', err => {
   console.error(`Error while connecting to DB: ${err.message}`);
